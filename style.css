@@ -22,12 +22,12 @@ body {
   cursor: default;
 }
 
-/* ── SCROLLBAR ── */
+
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--neon); border-radius: 2px; }
 
-/* ── NAV ── */
+
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -81,7 +81,7 @@ nav ul a:hover { color: var(--neon); }
 }
 .nav-cta:hover { background: var(--neon); color: var(--bg); }
 
-/* ── HERO ── */
+
 #hero {
   min-height: 100vh;
   display: flex;
@@ -230,7 +230,7 @@ nav ul a:hover { color: var(--neon); }
 }
 .btn-secondary:hover { border-color: var(--neon); color: var(--neon); }
 
-/* ── STATS BAR ── */
+
 .stats-bar {
   display: flex;
   justify-content: center;
@@ -268,7 +268,7 @@ nav ul a:hover { color: var(--neon); }
   color: var(--muted);
 }
 
-/* ── SECTION WRAPPER ── */
+
 section {
   padding: 100px 40px;
   max-width: 1200px;
@@ -301,7 +301,7 @@ section {
   font-weight: 300;
 }
 
-/* ── ONDE ANUNCIAMOS ── */
+
 #onde { position: relative; }
 
 .locations-grid {
@@ -370,7 +370,7 @@ section {
 .loc-tag.purple { color: var(--neon2); border-color: rgba(123,47,255,0.3); background: rgba(123,47,255,0.06); }
 .loc-tag.pink   { color: var(--neon3); border-color: rgba(255,45,120,0.3); background: rgba(255,45,120,0.06); }
 
-/* ── COMO FUNCIONA ── */
+
 #como {
   position: relative;
   background: var(--surface);
@@ -436,7 +436,7 @@ section {
   font-weight: 300;
 }
 
-/* Screen mockup */
+
 .screen-side {
   position: sticky;
   top: 120px;
@@ -483,7 +483,7 @@ section {
   line-height: 1.5;
 }
 
-/* Scanline effect */
+
 .screen-frame::after {
   content: '';
   position: absolute; inset: 0;
@@ -505,7 +505,7 @@ section {
   animation: blink 2s ease-in-out infinite;
 }
 
-/* Progress bar */
+
 .step-progress {
   width: 100%;
   max-width: 360px;
@@ -522,7 +522,7 @@ section {
   box-shadow: 0 0 8px var(--neon);
 }
 
-/* ── CTA FINAL ── */
+
 #cta {
   padding: 100px 40px;
   text-align: center;
@@ -565,7 +565,7 @@ section {
   flex-wrap: wrap;
 }
 
-/* ── FOOTER ── */
+
 footer {
   border-top: 1px solid var(--border);
   padding: 36px 60px;
@@ -601,7 +601,7 @@ footer a {
 }
 footer a:hover { text-decoration: underline; }
 
-/* ── DIVIDER ── */
+
 .neon-line {
   width: 60px; height: 2px;
   background: var(--neon);
@@ -609,7 +609,7 @@ footer a:hover { text-decoration: underline; }
   margin-bottom: 24px;
 }
 
-/* ── SCROLL INDICATOR ── */
+
 .scroll-hint {
   position: absolute;
   bottom: 36px;
@@ -647,7 +647,7 @@ footer a:hover { text-decoration: underline; }
   100% { top: 6px;  opacity: 0; }
 }
 
-/* ── RESPONSIVE ── */
+
 @media (max-width: 900px) {
   nav { padding: 18px 24px; }
   nav ul { display: none; }
