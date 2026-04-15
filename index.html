@@ -1,222 +1,317 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Olha Aí Mídia — Publicidade em Telas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Olha Aí — Mídia Out-of-Home Niterói & RJ</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .hc-desc {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.6);
+      margin: 0.4rem 0 0.5rem;
+      line-height: 1.4;
+    }
+    .hc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.3rem;
+    }
+    .hc-tags span {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.5rem;
+      border-radius: 99px;
+      background: rgba(255,204,0,0.15);
+      color: #ffcc00;
+      border: 1px solid rgba(255,204,0,0.3);
+    }
+  </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="logo">Olha<span>Aí</span></div>
-  <ul>
-    <li><a href="#onde">Onde Anunciamos</a></li>
-    <li><a href="#como">Como Funciona</a></li>
-    <li><a href="#cta">Contato</a></li>
-  </ul>
-  <a href="#cta" class="nav-cta">Anuncie agora</a>
+<nav id="navbar">
+  <a class="logo" href="#hero">
+    <img src="img/logo3.0.png" alt="Olha Aí" class="logo-img" />
+  </a>
+  <div class="nav-links">
+    <a href="#inicio">INÍCIO</a>
+    <a href="#pontos">PONTOS</a>
+    <a href="#clientes">ANUNCIANTES</a>
+    <a href="associar-se.html">ASSOCIAR-SE</a>
+  </div>
+  <div class="nav-actions">
+    <button class="btn-whatsapp">💬 WHATSAPP</button>
+    <button class="btn-orcamento" onclick="document.getElementById('orcamento').scrollIntoView({behavior:'smooth'})">ORÇAMENTO</button>
+  </div>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-
-  <div class="hero-tag">
-    <span></span>
-    Mídia Out-of-Home Digital
+  <div class="hero-left fade-in">
+    <div class="hero-badge">· MÍDIA OUT-OF-HOME · NITERÓI &amp; RJ</div>
+    <h1 class="hero-title">
+      <span class="ht-solid">Sua marca</span>
+      <span class="ht-solid">onde o</span>
+      <span class="ht-yellow">público</span>
+      <span class="ht-outline">vive</span>
+    </h1>
+    <p class="hero-desc">LEDs, empenas, lonas, shoppings e elevadores. A Olha Aí coloca a sua mensagem onde o seu cliente está — todos os dias, sem skip, sem bloqueio.</p>
+    <div class="hero-ctas">
+      <button class="btn-primary" onclick="document.getElementById('pontos').scrollIntoView({behavior:'smooth'})">📍 Explorar Pontos</button>
+      <button class="btn-ghost" onclick="document.getElementById('orcamento').scrollIntoView({behavior:'smooth'})">Falar com Especialista →</button>
+    </div>
   </div>
-
-  <h1 class="hero-title">
-    SUA MARCA<br>
-    <span class="accent">EM TODO</span><br>
-    <span class="accent2">LUGAR</span>
-  </h1>
-
-  <p class="hero-sub">
-    Levamos a sua mensagem para onde as pessoas realmente estão — telas estratégicas em shoppings, elevadores e espaços de alto tráfego.
-  </p>
-
-  <div class="hero-actions">
-    <a href="#onde" class="btn-primary">Ver locais</a>
-    <a href="#como" class="btn-secondary">Como funciona</a>
+  <div class="hero-cards fade-in delay-1">
+    <div class="hero-card">
+      <span class="hc-icon">📺</span>
+      <div class="hc-label">LEDS</div>
+      <div class="hc-pts">8 pts</div>
+      <p class="hc-desc">Alta visibilidade em vias de grande fluxo. Conteúdo dinâmico, impacto dia e noite.</p>
+      <div class="hc-tags"><span>ALTA VISIBILIDADE</span><span>24H</span></div>
+      <div class="hc-dot"></div>
+    </div>
+    <div class="hero-card">
+      <span class="hc-icon">🏗️</span>
+      <div class="hc-label">EMPENAS &amp; LONAS</div>
+      <div class="hc-pts">12 pts</div>
+      <p class="hc-desc">Grandes formatos nas fachadas. Presença marcante e reconhecimento inconfundível.</p>
+      <div class="hc-tags"><span>GRANDE FORMATO</span><span>LONGA DURAÇÃO</span></div>
+      <div class="hc-dot"></div>
+    </div>
+    <div class="hero-card">
+      <span class="hc-icon">🛍️</span>
+      <div class="hc-label">SHOPPINGS</div>
+      <div class="hc-pts">9 pts</div>
+      <p class="hc-desc">Público qualificado no momento da decisão de compra. Totens e painéis internos.</p>
+      <div class="hc-tags"><span>ALTA INTENÇÃO</span><span>QUALIFICADO</span></div>
+      <div class="hc-dot"></div>
+    </div>
+    <div class="hero-card">
+      <span class="hc-icon">🏢</span>
+      <div class="hc-label">ELEVADORES</div>
+      <div class="hc-pts">47 pts</div>
+      <p class="hc-desc">Contato diário hiperlocal com moradores e decisores. Alta frequência e recall elevado.</p>
+      <div class="hc-tags"><span>HIPERLOCAL</span><span>B2B &amp; RESIDENCIAL</span></div>
+      <div class="hc-dot"></div>
+    </div>
+    <div class="hero-card">
+      <span class="hc-icon">🏪</span>
+      <div class="hc-label">COMÉRCIO</div>
+      <div class="hc-pts">23 pts</div>
+      <p class="hc-desc">Telas e adesivos em estabelecimentos comerciais. Impacto direto no ponto de venda.</p>
+      <div class="hc-tags"><span>PONTO DE VENDA</span><span>ALTA FREQUÊNCIA</span></div>
+      <div class="hc-dot"></div>
+    </div>
   </div>
-
-  <div class="scroll-hint">
-    <div class="scroll-arrow"></div>
-    Role para baixo
+  <div class="hero-stats fade-in delay-2">
+    <div class="hstat"><div class="hstat-num">89%</div><div class="hstat-lbl">da pop. impactada por OOH</div></div>
+    <div class="hstat"><div class="hstat-num">2°</div><div class="hstat-lbl">canal publicitário do país</div></div>
+    <div class="hstat"><div class="hstat-num">40%</div><div class="hstat-lbl">Aumente a efetividade das campanhas no digital com a OOH</div></div>
   </div>
 </section>
 
-<!-- STATS BAR -->
-<div class="stats-bar">
-  <div class="stat-item">
-    <div class="stat-num">200+</div>
-    <div class="stat-label">Telas Ativas</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">50K</div>
-    <div class="stat-label">Impactos / dia</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">15+</div>
-    <div class="stat-label">Locais Parceiros</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">98%</div>
-    <div class="stat-label">Uptime garantido</div>
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ti yellow">LONAS</span><span class="ti"> DE GRANDE FORMATO</span><span class="ti sep"> // </span>
+    <span class="ti yellow">SHOPPINGS &amp; GALERIAS</span><span class="ti sep"> // </span>
+    <span class="ti yellow">ELEVADORES</span><span class="ti"> RESIDENCIAIS E COMERCIAIS</span><span class="ti sep"> // </span>
+    <span class="ti">NITERÓI · SÃO GONÇALO · RIO DE JANEIRO</span><span class="ti sep"> // </span>
+    <span class="ti yellow">PROPOSTA DE PARCERIA</span><span class="ti"> — GERE RECEITA PASSIVA</span><span class="ti sep"> // </span>
+    <span class="ti yellow">LEDS</span><span class="ti"> DE ALTO IMPACTO</span><span class="ti sep"> // </span>
+    <span class="ti yellow">LONAS</span><span class="ti"> DE GRANDE FORMATO</span><span class="ti sep"> // </span>
+    <span class="ti yellow">SHOPPINGS &amp; GALERIAS</span><span class="ti sep"> // </span>
+    <span class="ti yellow">ELEVADORES</span><span class="ti"> RESIDENCIAIS E COMERCIAIS</span><span class="ti sep"> // </span>
+    <span class="ti">NITERÓI · SÃO GONÇALO · RIO DE JANEIRO</span><span class="ti sep"> // </span>
+    <span class="ti yellow">PROPOSTA DE PARCERIA</span><span class="ti"> — GERE RECEITA PASSIVA</span><span class="ti sep"> // </span>
+    <span class="ti yellow">LEDS</span><span class="ti"> DE ALTO IMPACTO</span><span class="ti sep"> // </span>
   </div>
 </div>
 
-<!-- SEÇÃO 1: ONDE ANUNCIAMOS -->
-<section id="onde">
-  <div class="neon-line"></div>
-  <div class="section-label">Seção 01 — Onde Anunciamos</div>
-  <h2 class="section-title">TELAS NOS<br>LUGARES CERTOS</h2>
-  <p class="section-desc">
-    Nossa rede cobre os pontos de maior circulação urbana. Seu anúncio aparece quando e onde o público está mais receptivo.
-  </p>
-
-  <div class="locations-grid">
-
-    <div class="loc-card">
-      <span class="loc-icon">🛍️</span>
-      <div class="loc-title">Shoppings Centers</div>
-      <div class="loc-desc">Telas de alto impacto posicionadas em corredores, praças de alimentação e entradas principais — onde o fluxo é constante e o poder de compra é alto.</div>
-      <span class="loc-tag cyan">Alto tráfego</span>
-    </div>
-
-    <div class="loc-card">
-      <span class="loc-icon">🛗</span>
-      <div class="loc-title">Elevadores</div>
-      <div class="loc-desc">Ambiente fechado com atenção total. Nos elevadores de prédios comerciais e residenciais, a sua marca tem 30 segundos de presença exclusiva com o usuário.</div>
-      <span class="loc-tag purple">Atenção exclusiva</span>
-    </div>
-
-    <div class="loc-card">
-      <span class="loc-icon">🏢</span>
-      <div class="loc-title">Halls Comerciais</div>
-      <div class="loc-desc">Recepções e áreas de espera de centros empresariais. Um público qualificado, com perfil de decisão e tempo disponível para absorver a mensagem.</div>
-      <span class="loc-tag cyan">Público qualificado</span>
-    </div>
-
-    <div class="loc-card">
-      <span class="loc-icon">🏋️</span>
-      <div class="loc-title">Academias & Clínicas</div>
-      <div class="loc-desc">Ambientes de saúde e bem-estar com audiência engajada. Telas posicionadas em zonas de espera e vestiários garantem exposição prolongada.</div>
-      <span class="loc-tag pink">Bem-estar</span>
-    </div>
-
-    <div class="loc-card">
-      <span class="loc-icon">🚗</span>
-      <div class="loc-title">Estacionamentos</div>
-      <div class="loc-desc">Totens e painéis digitais na entrada e saída de estacionamentos. Impacto no momento pré e pós-compra — um timing estratégico para qualquer setor.</div>
-      <span class="loc-tag purple">Timing estratégico</span>
-    </div>
-
-    <div class="loc-card">
-      <span class="loc-icon">📍</span>
-      <div class="loc-title">Novos Locais</div>
-      <div class="loc-desc">Nossa rede está em expansão constante. Tem um ponto específico em mente? Fale com a gente — avaliamos parcerias em novos espaços estratégicos.</div>
-      <span class="loc-tag pink">Em expansão</span>
-    </div>
-
+<section id="sobre">
+  <h2 class="sobre-title"><span class="accent">Sobre</span> Nós</h2>
+  <div class="sobre-right fade-in delay-1">
+    <p>89% das pessoas notam anúncios durante a
+rotina fora do mundo online. É onde a atenção
+ainda é real. A Olha Aí conecta marcas com
+pessoas nos momentos em que elas estão
+presentes e receptivas. Telas digitais,
+comunicação visual, ativações e mídia ambiente:
+o formato certo, no lugar certo, para quem
+importa. Sem bloqueador. Sem botão de pular. 
+E quando o offline e o online trabalham juntos,
+campanhas com OOH registram até 40% mais
+conversão no tráfego pago.
+Quem não é visto, não é lembrado. A gente
+cuida para que você seja os dois.</p>
+    <blockquote class="sobre-quote">"Quem não é visto, não é lembrado."</blockquote>
+    <button class="btn-primary" onclick="document.getElementById('orcamento').scrollIntoView({behavior:'smooth'})">💡 Quero anunciar agora</button>
   </div>
 </section>
 
-<!-- SEÇÃO 2: COMO FUNCIONA -->
-<div id="como">
-  <div class="inner">
-    <div class="neon-line"></div>
-    <div class="section-label">Seção 02 — Como Funciona</div>
-    <h2 class="section-title">DO BRIEFING<br>À TELA EM<br>DIAS</h2>
-    <p class="section-desc">
-      Processo simples, rápido e transparente. Você cuida do seu negócio — a gente cuida de colocar sua marca em evidência.
-    </p>
 
-    <div class="steps-layout">
-      <!-- Steps -->
-      <div class="step-list" id="stepList">
+<section id="pontos">
 
-        <div class="step-item active" data-step="0" onclick="setStep(0)">
-          <div class="step-num">1</div>
-          <div class="step-body">
-            <div class="step-title">Escolha os locais</div>
-            <div class="step-text">Selecione os pontos da nossa rede que fazem sentido para o seu público-alvo. Você pode segmentar por bairro, tipo de local ou perfil de audiência.</div>
-          </div>
+  <div class="pontos-header">
+    <p class="eyebrow">Conheça nossos pontos</p>
+    <h2 class="section-title">Encontre o ponto <span class="accent">ideal</span><br>para sua campanha</h2>
+    <p class="section-sub">Pesquise por bairro ou cidade e filtre pelo formato que melhor alcança seu público.</p>
+  </div>
+
+  
+  <div class="search-section">
+    <div class="search-wrap">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="text" id="searchInput" placeholder="Buscar por bairro ou endereço..." oninput="applyFilters()">
+    </div>
+
+    <div class="dropdown-wrapper" id="bairroWrapper">
+      <button class="filter-btn" onclick="toggleDropdown('bairroMenu')">
+        <span id="bairroLabel">Bairro (todos)</span> ▾
+      </button>
+      <div class="dropdown-menu" id="bairroMenu"></div>
+    </div>
+
+    <div class="dropdown-wrapper" id="cidadeWrapper">
+      <button class="filter-btn" onclick="toggleDropdown('cidadeMenu')">
+        <span id="cidadeLabel">Cidade (todos)</span> ▾
+      </button>
+      <div class="dropdown-menu" id="cidadeMenu">
+        <div class="dropdown-item">
+          <input type="checkbox" id="city-niteroi" value="NITERÓI" onchange="onCityChange()">
+          <label for="city-niteroi">Niterói</label>
         </div>
-
-        <div class="step-item" data-step="1" onclick="setStep(1)">
-          <div class="step-num">2</div>
-          <div class="step-body">
-            <div class="step-title">Envie seu conteúdo</div>
-            <div class="step-text">Mande o material da campanha — vídeo, imagem ou animação. Se precisar, nossa equipe criativa cria ou adapta o conteúdo para o formato ideal das telas.</div>
-          </div>
-        </div>
-
-        <div class="step-item" data-step="2" onclick="setStep(2)">
-          <div class="step-num">3</div>
-          <div class="step-body">
-            <div class="step-title">Aprovação & agendamento</div>
-            <div class="step-text">Revisamos tudo, aprovamos juntos e agendamos a exibição. Você define o período e os horários de maior impacto para o seu negócio.</div>
-          </div>
-        </div>
-
-        <div class="step-item" data-step="3" onclick="setStep(3)">
-          <div class="step-num">4</div>
-          <div class="step-body">
-            <div class="step-title">Campanha no ar</div>
-            <div class="step-text">Sua marca começa a aparecer nas telas em tempo real. Acompanhe o desempenho com relatórios periódicos e dados de impacto da campanha.</div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Screen mockup -->
-      <div class="screen-side">
-        <div class="screen-frame">
-          <div class="screen-inner" id="screenInner">
-            <div class="screen-emoji" id="screenEmoji">🗺️</div>
-            <div class="screen-headline" id="screenHeadline">ESCOLHA O LOCAL</div>
-            <div class="screen-body" id="screenBody">Shopping • Elevador • Hall<br>Segmente seu público com precisão</div>
-          </div>
-        </div>
-        <div class="screen-led"></div>
-        <div class="step-progress">
-          <div class="step-progress-fill" id="progressFill" style="width: 25%"></div>
+        <div class="dropdown-item">
+          <input type="checkbox" id="city-rio" value="RIO DE JANEIRO" onchange="onCityChange()">
+          <label for="city-rio">Rio de Janeiro</label>
         </div>
       </div>
+    </div>
 
+    <div class="dropdown-wrapper" id="modalWrapper">
+      <button class="filter-btn" onclick="toggleDropdown('modalMenu')">
+        <span id="modalLabel">Modal (todos)</span> ▾
+      </button>
+      <div class="dropdown-menu" id="modalMenu">
+        <div class="dropdown-item"><input type="checkbox" id="modal-leds"     value="LEDS"                     onchange="onModalChange()"><label for="modal-leds">Leds</label></div>
+        <div class="dropdown-item"><input type="checkbox" id="modal-lonas"    value="LONAS"                    onchange="onModalChange()"><label for="modal-lonas">Lonas</label></div>
+        <div class="dropdown-item"><input type="checkbox" id="modal-empenas"  value="EMPENAS"                  onchange="onModalChange()"><label for="modal-empenas">Empenas</label></div>
+        <div class="dropdown-item"><input type="checkbox" id="modal-totem"   value="TOTEM"                   onchange="onModalChange()"><label for="modal-totem">Totem</label></div>
+        <div class="dropdown-item"><input type="checkbox" id="modal-telas"    value="TELAS DIGITAIS"           onchange="onModalChange()"><label for="modal-telas">Telas Digitais</label></div>
+        <div class="dropdown-item"><input type="checkbox" id="modal-adesivos" value="ADESIVOS"                 onchange="onModalChange()"><label for="modal-adesivos">Adesivos</label></div>
+        <div class="dropdown-item"><input type="checkbox" id="modal-delivery" value="PUBLICIDADE EM DELIVERYS" onchange="onModalChange()"><label for="modal-delivery">Publicidade em Deliverys</label></div>
+      </div>
+    </div>
+
+    <button class="btn-clear"         onclick="clearFilters()">LIMPAR FILTROS</button>
+    <button class="btn-yellow"        onclick="markAll()">MARCAR TUDO</button>
+    <button class="btn-outline-yellow" onclick="unmarkAll()">DESMARCAR TUDO</button>
+  </div>
+
+ 
+  <div class="tabs-section" id="tabsSection">
+    <button class="filter-tab active" data-tab="todos">Todos os pontos      <span class="tab-count" id="count-todos"></span></button>
+    <button class="filter-tab"        data-tab="ruas">Nas ruas             <span class="tab-count" id="count-ruas"></span></button>
+    <button class="filter-tab"        data-tab="shoppings">Shoppings e galerias <span class="tab-count" id="count-shoppings"></span></button>
+    <button class="filter-tab"        data-tab="comercios">Nos comércios        <span class="tab-count" id="count-comercios"></span></button>
+    <button class="filter-tab"        data-tab="deliverys">Nos deliverys        <span class="tab-count" id="count-deliverys"></span></button>
+    <button class="filter-tab"        data-tab="bancas">Nas bancas           <span class="tab-count" id="count-bancas"></span></button>
+    <button class="filter-tab"        data-tab="elevadores">Nos elevadores       <span class="tab-count" id="count-elevadores"></span></button>
+    <button class="filter-tab"        data-tab="transportes">Nos transportes     <span class="tab-count" id="count-transportes"></span></button>
+  </div>
+
+  <div class="active-filters" id="activeFilters"></div>
+
+  <div class="results-header">
+    <p class="results-count">Exibindo <strong id="resultsCount">0</strong> pontos</p>
+    <select class="sort-select" onchange="applyFilters()">
+      <option>Ordenar: Relevância</option>
+      <option>Ordenar: Menor preço</option>
+      <option>Ordenar: Maior preço</option>
+    </select>
+  </div>
+
+  <div class="cards-grid" id="cardsGrid"></div>
+
+</section>
+
+
+<section id="orcamento">
+  <div class="contact-grid">
+    <div class="contact-info fade-in">
+      <div class="eyebrow">FALE COM UM ESPECIALISTA</div>
+      <h2 class="contact-title">Vamos criar sua<br>campanha <span class="accent">juntos</span></h2>
+      <p class="contact-desc">Nossos especialistas analisam o seu negócio e montam um plano de mídia personalizado. Sem enrolação — resposta em até 24h.</p>
+      <div class="cd-row"><div class="cd-icon">📍</div><div><div class="cd-label">ONDE ESTAMOS</div><div class="cd-value">Niterói, RJ — Brasil</div></div></div>
+      <div class="cd-row"><div class="cd-icon">💬</div><div><div class="cd-label">WHATSAPP</div><div class="cd-value">(21) 99999-9999</div></div></div>
+      <div class="cd-row"><div class="cd-icon">📧</div><div><div class="cd-label">E-MAIL</div><div class="cd-value">contato@olhaai.com.br</div></div></div>
+      <button class="btn-primary" style="margin-top:1.5rem">💬 Chamar no WhatsApp agora</button>
+    </div>
+    <div class="form-box fade-in delay-1">
+      <div class="form-header"><h3>Solicite seu orçamento</h3><span class="badge-gratis">GRÁTIS</span></div>
+      <div class="form-row">
+        <div class="form-group"><label>NOME COMPLETO *</label><input type="text" placeholder="Seu nome"/></div>
+        <div class="form-group"><label>E-MAIL *</label><input type="email" placeholder="email@empresa.com"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>WHATSAPP *</label><input type="tel" placeholder="(21) 99999-9999"/></div>
+        <div class="form-group"><label>EMPRESA</label><input type="text" placeholder="Nome da empresa"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>TIPO DE MÍDIA</label><select><option value="">Selecione...</option><option>LEDs &amp; Painéis</option><option>Empenas &amp; Lonas</option><option>Shoppings &amp; Galerias</option><option>Elevadores Residenciais</option><option>Elevadores Comerciais</option><option>Pacote Completo</option></select></div>
+        <div class="form-group"><label>INVESTIMENTO MENSAL</label><select><option value="">Selecione...</option><option>Até R$ 1.000</option><option>R$ 1.000 – R$ 3.000</option><option>R$ 3.000 – R$ 8.000</option><option>Acima de R$ 8.000</option></select></div>
+      </div>
+      <div class="form-row"><div class="form-group full"><label>MENSAGEM (OPCIONAL)</label><textarea placeholder="Fale sobre seu negócio e objetivos da campanha..."></textarea></div></div>
+      <button class="btn-submit">💬 ENVIAR E AGUARDAR CONTATO</button>
+      <p class="form-note">Ao enviar, você concorda com nossa <a href="#">Política de Privacidade</a>. Respondemos em até 24h.</p>
     </div>
   </div>
-</div>
+</section>
 
-<!-- CTA FINAL -->
-<div id="cta">
-  <div class="cta-inner">
-    <div class="neon-line" style="margin: 0 auto 24px;"></div>
-    <h2 class="cta-title">PRONTO PARA<br><span>SE DESTACAR?</span></h2>
-    <p class="cta-sub">
-      Entre em contato agora e descubra como a Olha Aí pode transformar a visibilidade da sua marca nas telas certas.
-    </p>
-    <div class="cta-actions">
-      <a href="https://wa.me/55" class="btn-primary">💬 Falar no WhatsApp</a>
-      <a href="https://instagram.com/olha.ai.midia" target="_blank" class="btn-secondary">Ver Instagram</a>
-    </div>
+<section id="stats">
+  <div class="stats-grid fade-in">
+    <div class="sblock"><div class="snum">89+</div><div class="sdesc">% da população impactada por OOH todo mês</div><div class="ssrc">Kantar IBOPE</div></div>
+    <div class="sblock"><div class="snum">40%</div><div class="sdesc">Aumenta a efetividade das campanhas no digital com a OOH</div><div class="ssrc">Kantar IBOPE</div></div>
+    <div class="sblock"><div class="snum">86+</div><div class="sdesc">pontos de exibição ativos em Niterói e região</div><div class="ssrc">Base Olha Aí</div></div>
+    <div class="sblock"><div class="snum">1,2 M+</div><div class="sdesc">impactos por mês na nossa rede completa</div><div class="ssrc">Estimativa por fluxo</div></div>
   </div>
-</div>
+</section>
 
-<!-- FOOTER -->
+<section id="clientes">
+  <div class="fade-in">
+    <div class="eyebrow">O QUE DIZEM NOSSOS CLIENTES</div>
+    <h2 class="section-title">Resultados que <span class="accent">falam</span> por si</h2>
+  </div>
+  <div class="testimonials fade-in delay-1">
+    <div class="tcard"><div class="tstars">★★★★★</div><p class="ttext">"Colocamos nosso anúncio no LED da Av. Ernani do Amaral Peixoto e o retorno foi imediato. Clientes chegando dizendo que viram a campanha!"</p><div class="tauthor"><div class="tavatar" style="background:#e11d48">R</div><div><div class="tname">Ricardo M.</div><div class="trole">Restaurante em Icaraí</div></div></div></div>
+    <div class="tcard"><div class="tstars">★★★★★</div><p class="ttext">"A equipe nos ajudou a escolher os melhores pontos para o nosso público. A campanha nos elevadores foi cirúrgica e muito eficiente."</p><div class="tauthor"><div class="tavatar" style="background:#2563eb">A</div><div><div class="tname">Ana Beatriz F.</div><div class="trole">Clínica Odontológica</div></div></div></div>
+    <div class="tcard"><div class="tstars">★★★★★</div><p class="ttext">"Nunca tínhamos investido em OOH antes. A equipe da Olha Aí nos orientou em cada passo — desde o layout até a escolha dos pontos!"</p><div class="tauthor"><div class="tavatar" style="background:#16a34a">M</div><div><div class="tname">Marcelo L.</div><div class="trole">Academia de Artes Marciais</div></div></div></div>
+  </div>
+</section>
+
 <footer>
-  <div class="footer-logo">Olha<span>Aí</span> Mídia</div>
-  <p>© 2025 Olha Aí Mídia. Todos os direitos reservados.</p>
-  <a href="https://instagram.com/olha.ai.midia" target="_blank">@olha.ai.midia</a>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="#hero">👁️ Olha <span class="logo-accent">Aí</span></a>
+      <p>Mídia Out-of-Home estratégica em Niterói, São Gonçalo e Rio de Janeiro. LEDs, empenas, lonas, shoppings e elevadores.</p>
+      <div class="footer-socials"><a class="soc" href="#">📘</a><a class="soc" href="#">📷</a><a class="soc" href="#">💼</a></div>
+    </div>
+    <div class="footer-col"><h4>MÍDIAS</h4><a href="#">LEDs &amp; Painéis</a><a href="#">Empenas &amp; Lonas</a><a href="#">Shoppings &amp; Galerias</a><a href="#">Elevadores Residenciais</a><a href="#">Elevadores Comerciais</a></div>
+    <div class="footer-col"><h4>EMPRESA</h4><a href="#">Sobre a Olha Aí</a><a href="#">Nossos Pontos</a><a href="#">Proposta de Parceria</a><a href="#">Blog</a></div>
+    <div class="footer-col"><h4>CONTATO</h4><a href="#">Solicitar Orçamento</a><a href="#">WhatsApp</a><a href="#">E-mail</a><a href="#">Niterói, RJ</a></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Olha Aí Comunicação LTDA. Todos os direitos reservados.</p>
+    <div class="footer-links"><a href="#">Privacidade</a><a href="#">Termos de Uso</a></div>
+  </div>
 </footer>
 
+<div class="chat-float">💬</div>
+
 <script src="script.js"></script>
+<script src="wpp.js"></script>
 </body>
 </html>
