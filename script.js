@@ -60,7 +60,9 @@ let state = {
   selectedBairros: [],
   selectedModals:  [],
   selectedCards:   new Set(),
-  showCards:       false,
+  currentPage:     1,
+  pageSize:        15,
+  showAll:         false,
 };
 
 
@@ -70,7 +72,8 @@ function setTab(el) {
   document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
   el.classList.add('active');
   state.activeTab = el.dataset.tab;
-  state.showCards = true;
+  state.currentPage = 1;
+  state.showAll = false;
   applyFilters();
 }
 
@@ -95,6 +98,8 @@ document.addEventListener('click', e => {
 function onCityChange() {
   state.selectedCities  = [...document.querySelectorAll('#cidadeMenu input:checked')].map(i => i.value);
   state.selectedBairros = [];
+  state.currentPage = 1;
+  state.showAll = false;
   updateBairroMenu(); updateBairroLabel(); updateCidadeLabel();
   applyFilters();
 }
@@ -122,6 +127,8 @@ function updateBairroMenu() {
 }
 function onBairroChange() {
   state.selectedBairros = [...document.querySelectorAll('#bairroMenu input:checked')].map(i => i.value);
+  state.currentPage = 1;
+  state.showAll = false;
   updateBairroLabel(); applyFilters();
 }
 function updateBairroLabel() {
@@ -134,6 +141,8 @@ function updateBairroLabel() {
 
 function onModalChange() {
   state.selectedModals = [...document.querySelectorAll('#modalMenu input:checked')].map(i => i.value);
+  state.currentPage = 1;
+  state.showAll = false;
   updateModalLabel(); applyFilters();
 }
 function updateModalLabel() {
@@ -165,22 +174,14 @@ function applyFilters() {
   });
 
   const filtered = getFilteredPoints(state.activeTab);
+  const total = filtered.length;
+  const visiblePoints = filtered;
+
   const countEl  = document.getElementById('resultsCount');
-  if (countEl) countEl.textContent = filtered.length;
+  if (countEl) countEl.textContent = `${visiblePoints.length} de ${total}`;
 
   const grid = document.getElementById('cardsGrid');
   if (!grid) return;
-
-  if (!state.showCards) {
-    grid.innerHTML = `
-      <div class="empty-state">
-        <div class="empty-icon">🔎</div>
-        <h3>Clique em uma aba para ver os pontos</h3>
-        <p>Escolha entre as categorias disponíveis.</p>
-      </div>`;
-    renderActiveFilters();
-    return;
-  }
 
   if (filtered.length === 0) {
     grid.innerHTML = `
@@ -193,7 +194,7 @@ function applyFilters() {
     return;
   }
 
-  grid.innerHTML = filtered.map(p => `
+  grid.innerHTML = visiblePoints.map(p => `
     <div class="card ${state.selectedCards.has(p.id) ? 'selected' : ''}" id="card-${p.id}">
       <input type="checkbox" class="card-checkbox"
         ${state.selectedCards.has(p.id) ? 'checked' : ''}
@@ -220,7 +221,6 @@ function applyFilters() {
 
   renderActiveFilters();
 }
-
 
 function toggleCard(id, cb) {
   if (cb.checked) state.selectedCards.add(id);
@@ -282,25 +282,15 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
       btn.classList.add('active');
       state.activeTab = btn.dataset.tab;
-      state.showCards = true;
       applyFilters();
     });
   });
 
-  const pontosSection = document.getElementById('pontos');
-  if (pontosSection) {
-    pontosSection.addEventListener('click', (e) => {
-      const clickedControl = e.target.closest('button, input, select, a, label, .filter-tab, .filter-btn, .dropdown-menu, .sort-select');
-      if (clickedControl) return;
-      state.showCards = !state.showCards;
-      applyFilters();
-    });
-  }
-
-  // Buscar apenas atualiza, não mostra cards antes da aba ser clicada
   const searchInput = document.getElementById('searchInput');
   if (searchInput) {
     searchInput.addEventListener('input', () => {
+      state.currentPage = 1;
+      state.showAll = false;
       applyFilters();
     });
   }
