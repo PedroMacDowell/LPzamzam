@@ -1,3 +1,18 @@
+// Funções de scroll do carrossel
+function scrollLeft() {
+  const grid = document.getElementById('cardsGrid');
+  if (grid) {
+    grid.scrollBy({ left: -400, behavior: 'smooth' });
+  }
+}
+
+function scrollRight() {
+  const grid = document.getElementById('cardsGrid');
+  if (grid) {
+    grid.scrollBy({ left: 400, behavior: 'smooth' });
+  }
+}
+
 document.querySelectorAll('.midia-card').forEach(c => {
   c.addEventListener('mouseenter', () => {
     document.querySelectorAll('.midia-card').forEach(x => x.classList.remove('active'));
@@ -220,6 +235,46 @@ function applyFilters() {
   `).join('');
 
   renderActiveFilters();
+  renderCarousel();
+}
+
+let carouselTimer = null;
+
+function getCarouselStep() {
+  const card = document.querySelector('.cards-grid .card');
+  if (!card) return 0;
+  const style = getComputedStyle(card);
+  const gap = 16;
+  return card.offsetWidth + gap;
+}
+
+function renderCarousel() {
+  const grid = document.getElementById('cardsGrid');
+  if (!grid) return;
+  grid.scrollLeft = 0;
+  startCarousel();
+}
+
+function startCarousel() {
+  const grid = document.getElementById('cardsGrid');
+  if (!grid) return;
+  stopCarousel();
+  const step = getCarouselStep();
+  if (!step) return;
+  carouselTimer = setInterval(() => {
+    if (grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 8) {
+      grid.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      grid.scrollBy({ left: step, behavior: 'smooth' });
+    }
+  }, 3200);
+}
+
+function stopCarousel() {
+  if (carouselTimer) {
+    clearInterval(carouselTimer);
+    carouselTimer = null;
+  }
 }
 
 function toggleCard(id, cb) {
@@ -293,6 +348,14 @@ document.addEventListener('DOMContentLoaded', () => {
       state.showAll = false;
       applyFilters();
     });
+  }
+
+  const cardsGrid = document.getElementById('cardsGrid');
+  if (cardsGrid) {
+    cardsGrid.addEventListener('mouseenter', stopCarousel);
+    cardsGrid.addEventListener('mouseleave', startCarousel);
+    cardsGrid.addEventListener('touchstart', stopCarousel, { passive: true });
+    cardsGrid.addEventListener('touchend', startCarousel);
   }
 
   updateBairroMenu();

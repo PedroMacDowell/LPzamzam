@@ -301,22 +301,171 @@ body{
   }
 }
 
+}
+
+/* ========== TABLET (768px) ========== */
+@media(max-width:768px){
+  .container, .section, .operation{
+    padding: 3rem 1.8rem;
+  }
+  
+  .title{
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 2rem;
+  }
+  
+  .operation-title{
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+  
+  .grid{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .cards{
+    gap: 1.5rem;
+  }
+  
+  .card{
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+}
+
+/* ========== MOBILE LANDSCAPE (667px) ========== */
+@media(max-width:667px){
+  .container, .section, .operation{
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .title{
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 1.5rem;
+  }
+  
+  .operation-title{
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    max-width: 100%;
+  }
+  
+  .header, .operation-header{
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .steps-header h2{
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  .steps-grid{
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .grid{
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ========== MOBILE (520px e menor) ========== */
+@media(max-width:520px){
+  html{
+    font-size: 14px;
+  }
+  
+  .container, .section, .operation{
+    padding: 2rem 1.2rem;
+    max-width: 100%;
+  }
+  
+  .operation{
+    padding: 2rem 1.2rem;
+  }
+  
+  .title{
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+  }
+  
+  .operation-title{
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    font-weight: 900;
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  .title span, .operation-title span, .gold{
+    color: var(--gold);
+  }
+  
+  .header, .operation-header{
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    font-size: 11px;
+  }
+  
+  .operation-header{
+    font-size: 11px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .steps-header h2{
+    font-size: clamp(1.4rem, 3vw, 2rem);
+  }
+  
+  .steps-grid{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .grid{
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .cards{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .card{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.2rem;
+    border-radius: 12px;
+    background: linear-gradient(145deg,#15123a,#0e0c28);
+  }
+  
+  .card h3{
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .card p{
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  
+  .card .icon{
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+}
+
 @media(max-width:900px){
   .title{
-    font-size:42px;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
   }
 
   .grid{
     grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:600px){
-  .steps-grid{
-    grid-template-columns:1fr;
-  }
-
-  .steps-header h2{
-    font-size:28px;
   }
 }
