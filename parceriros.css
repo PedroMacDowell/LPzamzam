@@ -301,8 +301,6 @@ body{
   }
 }
 
-}
-
 /* ========== TABLET (768px) ========== */
 @media(max-width:768px){
   .container, .section, .operation{

@@ -97,19 +97,6 @@ body {
   object-fit: contain;
 }
 
-.logo-footer {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.logo-img-footer {
-  max-height: 80px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-}
-
 .nav-links { display: flex; align-items: center; gap: 2.2rem; }
 .nav-links a {
   font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em;
@@ -968,8 +955,6 @@ footer {
   .scroll-arrow { width: 38px; height: 38px; font-size: 15px; }
   .cards-grid { gap: 12px; }
   .card { border-radius: 10px; }
-}
-
 }
 
 /* ========== MOBILE (520px e menor) ========== */
